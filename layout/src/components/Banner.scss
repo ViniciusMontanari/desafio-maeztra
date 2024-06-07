@@ -1,0 +1,18 @@
+// src/styles/Banner.scss
+.banner {
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 36px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+    }
+  }  
