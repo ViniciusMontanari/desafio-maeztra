@@ -6,7 +6,7 @@
     text-align: -webkit-center;
 
     .lorem-infos {
-        width: 300px;
+        width: 290px;
 
         h1 {
             text-align: left;
@@ -27,6 +27,39 @@
             height: 185px;
             border-radius: 4px;
             margin-top: 24px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .lorem {
+        width: 100%;
+        overflow: hidden;
+        text-align: -webkit-center;
+    
+        .lorem-infos {
+            width: 290px;
+    
+            h1 {
+                text-align: left;
+                font-size: 24px;
+                font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+                font-weight: 700;
+            }
+    
+            p {
+                font-size: 14px;
+                font-weight: 400;
+                font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+                text-align: left;
+            }
+    
+            img {
+                width: 300px;
+                height: 185px;
+                border-radius: 4px;
+                margin-top: 24px;
+            }
         }
     }
 }
