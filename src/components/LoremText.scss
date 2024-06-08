@@ -1,0 +1,28 @@
+.lorem {
+    width: 100%;
+    overflow: hidden;
+    text-align: -webkit-center;
+
+    .lorem-infos {
+        width: 300px;
+
+        h1 {
+            text-align: left;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        img {
+            width: 300px;
+            height: 185px;
+            border-radius: 4px;
+            margin-top: 24px;
+        }
+    }
+}
