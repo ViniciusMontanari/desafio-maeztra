@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 37px;
+    margin-bottom: 56px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+    margin-left: 43px;
+}
+
+.menu-text {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+    text-align: left;
+    flex: 1;
+}
+
+.menu-icon {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    margin-left: 1rem;
+}

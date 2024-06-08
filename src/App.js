@@ -5,6 +5,8 @@ import Tips from './components/Tips';
 import Partnership from './components/Partnership';
 import Shelf from './components/Shelf';
 import LoremText from './components/LoremText';
+import Newsletter from './components/Newsletter';
+import BottomInfoMenu from './components/BottomInfoMenu';
 import Footer from './components/Footer';
 import NotificationBar from './components/NotificationBar';
 
@@ -20,6 +22,8 @@ function App() {
       <Partnership />
       <Shelf />
       <LoremText />
+      <Newsletter />
+      <BottomInfoMenu />
       <Footer />
     </div>
   );
