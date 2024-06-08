@@ -4,8 +4,8 @@ import './Banner.scss';
 
 const Banner = () => (
   <section className="banner">
-    <img src="banner-image.jpg" alt="Banner" />
-    <h1>Welcome to Our Store</h1>
+    <img src="https://i.imgur.com/ftECh3G.png" alt="Banner" />
+    <h1>Promoções de Outono</h1>
   </section>
 );
 

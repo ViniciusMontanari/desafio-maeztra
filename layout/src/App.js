@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Banner from './components/Banner';
 import ProductList from './components/ProductList';
 import Footer from './components/Footer';
+import NotificationBar from './components/NotificationBar';
+
 import './App.css';
 
 const products = [
@@ -14,6 +16,7 @@ const products = [
 function App() {
   return (
     <div className="App">
+      <NotificationBar />
       <Header />
       <Banner />
       <ProductList products={products} />
