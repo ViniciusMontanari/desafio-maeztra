@@ -17,7 +17,7 @@
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://ViniciusMontanari.github.io/desafio-maeztra",
+  "homepage": "https://viniciusmontanari.github.io/desafio-maeztra/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
