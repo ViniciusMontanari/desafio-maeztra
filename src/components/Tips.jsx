@@ -32,8 +32,10 @@ const Tips = () => {
           <div className="tips" key={index}>
             <img src={tips.image} alt={tips.name} />
             <div className='tips-text-container'>
-              <h2>{tips.name}</h2>
-              <p>{tips.description}</p>
+              <div className='tips-description'>
+                <h2>{tips.name}</h2>
+                <p>{tips.description}</p>
+              </div>
             </div>
           </div>
         ))}
