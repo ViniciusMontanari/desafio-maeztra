@@ -1,19 +1,70 @@
 // src/styles/Banner.scss
 .banner {
     position: relative;
-    img {
+
+    .banner-img {
       width: 100%;
       height: auto;
     }
-    h1 {
+
+    .left-arrow,
+    .right-arrow {
       position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .left-arrow {
+      left: 10px;
+    }
+  
+    .right-arrow {
+      right: 10px;
+    }
+
+    .content {
+      position: absolute;
+      text-align: center;
+      color: white;
+      width: 100%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: white;
-      font-size: 36px;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 10px 20px;
+      padding: 0 20px;
+
+      h1 {
+        position: absolute;
+        // top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 36px;
+        padding: 10px 20px;
+      }
+  
+      p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+  
+      button {
+        background-color: #FAA500;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #e69b00;
+        }
+      }
     }
 }
 
@@ -25,13 +76,72 @@
     position: relative;
     overflow: hidden;
     
-    img {
+    .banner-img {
       position: absolute;
       width: auto;
       height: 320px;
       top: 70%;
       left: 125%;
       transform: translate(-65%, -70%);
+    }
+
+    .left-arrow,
+    .right-arrow {
+      width: 25px;
+      height: 45px;
+    }
+
+    .left-arrow {
+      left: 10px;
+    }
+  
+    .right-arrow {
+      right: 10px;
+    }
+    
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 235px;
+      height: 320px;
+
+      .banner-title {
+        h1 {
+            left: 100px;
+            top: 73px;
+            color: white;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 36.57px;
+            text-align: justify;
+            padding: 0 4px;
+          }
+      }
+
+      .banner-text {
+        width: 184px;
+        height: 51px;
+        p {
+          left: 100px;
+          font-size: 14px;
+          text-align: justify;
+          line-height: 17.07px;
+          margin-top: 155px;
+          word-break: break-all;
+        }
+      }
+
+
+      button {
+        width: 76px;
+        height: 28px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17.07px;
+        padding: 5px 10px;
+        margin-top: 175px;
+      }
     }
   }
   
