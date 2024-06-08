@@ -1,10 +1,10 @@
 import React from 'react';
-import mockTips from './mockTips';
+import mockPartnership from './mockPartnership';
 import Slider from 'react-slick';
 
-import './Tips.scss';
+import './Partnership.scss';
 
-const Tips = () => {
+const Partnership = () => {
   const settings = {
     dots: false,
     arrows: false,
@@ -25,16 +25,12 @@ const Tips = () => {
   };
 
   return (
-    <section className="tips-list">
-      <h1 className='tips-list-title'>Por que comprar na Maeztra?</h1>
+    <section className="partner-list">
+      <h1 className='partner-list-title'>Marcas Parceiras</h1>
       <Slider {...settings}>
-        {mockTips.map((tips, index) => (
-          <div className="tips" key={index}>
-            <img src={tips.image} alt={tips.name} />
-            <div className='tips-text-container'>
-              <h2>{tips.name}</h2>
-              <p>{tips.description}</p>
-            </div>
+        {mockPartnership.map((partner, index) => (
+          <div className="partner" key={index}>
+            <img src={partner.image} alt={partner.name} />
           </div>
         ))}
       </Slider>
@@ -42,4 +38,4 @@ const Tips = () => {
   );
 };
 
-export default Tips;
+export default Partnership;
