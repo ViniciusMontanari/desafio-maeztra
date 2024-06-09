@@ -9,10 +9,14 @@ const Popup = () => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
         setIsOpen(true);
-      } else {
-        setIsOpen(false);
       }
     };
+
+    if(isOpen) {
+      document.body.classList.add('active-popup')
+    } else {
+      document.body.classList.remove('active-popup')
+    }
 
     handleResize(); // Verifique o tamanho da janela ao carregar a página
     window.addEventListener('resize', handleResize);
@@ -26,23 +30,25 @@ const Popup = () => {
     setIsOpen(false);
   };
 
-  if (!isOpen) return null;
-
   return (
-    <div className="popup-overlay">
-      <div className="popup">
-        <span className="popup-close" onClick={closePopup}>FECHAR</span>
-        <div className="popup-content">
-          <img className='carta' src='https://i.ibb.co/m5jFXjh/newsletter-mail-icon.png' alt='envelope' />
-          <h2>Bem Vindo à MAEZTRA</h2>
-          <p>Receba em Primeira mão<br/>desconto e ofertas exclusivas</p>
-          <input type="email" placeholder="Digite seu e-mail" />
-          <button type="button">
-            ENVIAR <img src='https://i.ibb.co/tJq8zVZ/image.png' alt='aviao' />
-          </button>
+    <>
+      {isOpen && (
+        <div className="popup-overlay">
+          <div className="popup">
+            <span className="popup-close" onClick={closePopup}>FECHAR</span>
+            <div className="popup-content">
+              <img className='carta' src='https://i.ibb.co/m5jFXjh/newsletter-mail-icon.png' alt='envelope' />
+              <h2>Bem Vindo à MAEZTRA</h2>
+              <p>Receba em Primeira mão<br/>desconto e ofertas exclusivas</p>
+              <input type="email" placeholder="Digite seu e-mail" />
+              <button type="button">
+                ENVIAR <img src='https://i.ibb.co/tJq8zVZ/image.png' alt='aviao' />
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
