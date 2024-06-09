@@ -24,13 +24,27 @@ const Header = () => {
         <img src="https://i.ibb.co/StZVfCx/logo-maeztra-novo.png" alt="Logo" />
       </div>
       <div className="search-bar">
-      <input 
-        type="text" 
-        placeholder="O que Você Busca?" 
-        className="search-input"
-      />
-      <button className="search-button">Buscar</button>
-    </div>
+        <input 
+          type="text" 
+          placeholder="O que Você Busca?" 
+          className="search-input"
+        />
+        <button className="search-button">Buscar</button>
+      </div>
+      <div className="menu-itens">
+        <div className="user">
+          <img src='https://i.ibb.co/5LWhkYX/user.png' alt='user'/>
+          <p>Minha Conta</p>
+        </div>
+        <div className="heart">
+          <img src='https://i.ibb.co/T8VCvG9/heart.png' alt='heart'/>
+          <p>Favoritos</p>
+        </div>
+        <div className="cart">
+          <img src='https://i.ibb.co/PzKkn7C/bag.png' alt='bag'/>
+          <p>Meu Carrinho</p>
+        </div>
+      </div>
       <div className="header-icons">
         <FontAwesomeIcon icon={faSearch} className="header-icon" />
         <FontAwesomeIcon icon={faShoppingBag} className="header-icon" />

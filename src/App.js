@@ -9,6 +9,7 @@ import Newsletter from './components/Newsletter';
 import BottomInfoMenu from './components/BottomInfoMenu';
 import Footer from './components/Footer';
 import Popup from './components/Popup';
+import DesktopMenu from './components/DesktopMenu';
 import NotificationBar from './components/NotificationBar';
 
 import './App.css';
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
       <NotificationBar />
       <Header />
+      <DesktopMenu />
       <Banner />
       <Tips />
       <Partnership />
