@@ -5,30 +5,44 @@ const Popup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
+    // Verificar se o popup foi fechado nesta sessão
+    const popupClosed = sessionStorage.getItem("popupClosed");
+    if (!popupClosed) {
+      // Verificar o tamanho da janela ao carregar a página
       if (window.innerWidth <= 768) {
         setIsOpen(true);
       }
+    }
+
+    // Listener para redimensionamento da janela
+    const handleResize = () => {
+      if (window.innerWidth <= 768 && !popupClosed) {
+        setIsOpen(true);
+      } else {
+        setIsOpen(false);
+      }
     };
 
-    handleResize(); // Verifique o tamanho da janela ao carregar a página
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
+    // Remover o listener no cleanup do useEffect
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add('active-popup');
+      document.body.classList.add("active-popup");
     } else {
-      document.body.classList.remove('active-popup');
+      document.body.classList.remove("active-popup");
     }
   }, [isOpen]);
 
   const closePopup = () => {
     setIsOpen(false);
+    // Marcar no sessionStorage que o popup foi fechado
+    sessionStorage.setItem("popupClosed", "true");
   };
 
   return (
