@@ -5,20 +5,18 @@
   flex-direction: column;
   padding: 20px;
 
-  // Ajuste para evitar overflow
+  
   overflow: hidden;
 
   .slick-list {
-    overflow: hidden; // Evita que o conteúdo extra cause overflow
-    margin: 0; // Remove margens negativas
-    padding: 0; // Remove qualquer padding que possa causar overflow
+    
   }
 
   .slick-slide {
-    padding: 0 5px; // Espaçamento interno dos slides
-    box-sizing: border-box; // Inclui padding no tamanho do box
+    padding: 0 5px; 
+    box-sizing: border-box;
 
-    // Evita que os slides ultrapassem a largura disponível
+    
     min-width: 0;
   }
 
@@ -32,34 +30,34 @@
   }
 
   .tips {
-    width: 298px; // Define a largura específica para cada item do slider
-    height: 64px; // Define a altura específica para cada item do slider
+    width: 298px; 
+    height: 64px; 
     background: #fff;
-    padding: 5px; // Ajuste o padding conforme necessário
-    box-sizing: border-box; // Inclui o padding na largura total do elemento
+    padding: 5px; 
+    box-sizing: border-box; 
     background-color: #EFEFEF;
     border-radius: 4px;
 
-    // Centraliza o conteúdo da imagem
+    
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
 
     img {
-      width: auto; // Mantém a proporção original da imagem
+      width: auto; 
       height: auto;
-      max-width: 100%; // Limita a largura da imagem ao tamanho do contêiner
-      max-height: 100%; // Limita a altura da imagem ao tamanho do contêiner
-      margin-right: 10px; // Espaçamento entre a imagem e o texto
+      max-width: 100%; 
+      max-height: 100%; 
+      margin-right: 10px; 
     }
 
     .tips-text-container {
       display: flex;
-      flex-direction: column; // Organiza o título acima do texto
-      align-items: flex-start; // Alinha o texto à esquerda
-      justify-content: center; // Centraliza verticalmente dentro do contêiner
-      width: 100%; // Garante que o contêiner do texto ocupe toda a largura restante
+      flex-direction: column; 
+      align-items: flex-start; 
+      justify-content: center; 
+      width: 100%; 
 
       .tips-description {
         margin-left: 10px;
@@ -68,18 +66,18 @@
 
     h2 {
       font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
-      font-size: 14px; // Ajuste conforme necessário
-      margin: 0; // Ajuste o espaçamento conforme necessário
-      text-align: left; // Alinha o texto à esquerda
-      width: 100%; // Garante que o texto não ultrapasse os limites do contêiner
+      font-size: 14px; 
+      margin: 0; 
+      text-align: left; 
+      width: 100%; 
     }
 
     p {
       font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
-      font-size: 12px; // Ajuste conforme necessário
+      font-size: 12px; 
       color: #666;
-      text-align: left; // Alinha o texto à esquerda
-      width: 100%; // Garante que o texto não ultrapasse os limites do contêiner
+      text-align: left; 
+      width: 100%; 
     }
   }
 }
@@ -89,62 +87,65 @@
   .tips-list {
 
     .tips {
-      width: 298px !important; // Mantém a largura em dispositivos móveis
-      height: 64px; // Mantém a altura em dispositivos móveis
+      width: 298px !important; 
+      height: 64px; 
       padding: 5px;
       background-color: #EFEFEF;
       border-radius: 4px;
       display: flex !important;
-      flex-direction: row; // Coloca a imagem e o texto em uma linha
+      flex-direction: row; 
       justify-content: start;
       align-items: center;
 
       img {
-        width: 32px; // Mantém a proporção original da imagem
+        width: 32px; 
         height: 32px;
-        max-width: 100%; // Limita a largura da imagem ao tamanho do contêiner
-        max-height: 100%; // Limita a altura da imagem ao tamanho do contêiner
-        margin-left: 26px; // Espaçamento entre a imagem e o texto
+        max-width: 100%; 
+        max-height: 100%; 
+        margin-left: 26px; 
       }
 
       .tips-text-container {
         display: flex;
-        flex-direction: column; // Organiza o título acima do texto
-        align-items: flex-start; // Alinha o texto à esquerda
-        justify-content: center; // Centraliza verticalmente dentro do contêiner
-        width: 100%; // Garante que o contêiner do texto ocupe toda a largura restante
+        flex-direction: column; 
+        align-items: flex-start; 
+        justify-content: center; 
+        width: 100%; 
       }
 
       h2 {
-        font-size: 14px; // Ajuste conforme necessário
-        margin: 0; // Ajuste o espaçamento conforme necessário
-        text-align: left; // Alinha o texto à esquerda
-        width: 100%; // Garante que o texto não ultrapasse os limites do contêiner
+        font-size: 14px; 
+        margin: 0; 
+        text-align: left; 
+        width: 100%; 
       }
 
       p {
-        font-size: 12px; // Ajuste conforme necessário
+        font-size: 12px; 
         color: #666;
-        margin: 0; // Ajuste o espaçamento conforme necessário
-        text-align: left; // Alinha o texto à esquerda
-        width: 100%; // Garante que o texto não ultrapasse os limites do contêiner
+        margin: 0; 
+        text-align: left; 
+        width: 100%; 
       }
     }
 
-    // Ajustes no slider para garantir que os itens respeitem a largura e altura definidas
+    
     .slick-slide {
       display: flex;
-      justify-content: center; // Centraliza os itens dentro do slide
+      justify-content: center; 
     }
 
     .slick-track {
       display: flex;
-      align-items: center; // Centraliza verticalmente os itens na track
+      align-items: center; 
     }
 
     .slick-list {
       display: flex;
-      justify-content: center; // Centraliza os itens dentro da lista do slider
+      justify-content: center; 
+      overflow: hidden; 
+      margin: 0;
+      padding: 0;
     }
   }
 }
