@@ -42,7 +42,7 @@ const Popup = () => {
               <h2>Bem Vindo à MAEZTRA</h2>
               <p>Receba em Primeira mão<br/>desconto e ofertas exclusivas</p>
               <input type="email" placeholder="Digite seu e-mail" />
-              <button type="button">
+              <button className='popup-btn' type="button">
                 ENVIAR <img src='https://i.ibb.co/tJq8zVZ/image.png' alt='aviao' />
               </button>
             </div>
