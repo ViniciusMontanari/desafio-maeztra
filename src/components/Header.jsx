@@ -46,8 +46,8 @@ const Header = () => {
         </div>
       </div>
       <div className="header-icons">
-        <FontAwesomeIcon icon={faSearch} className="header-icon" />
-        <FontAwesomeIcon icon={faShoppingBag} className="header-icon" />
+        <img className="header-icon" src='https://i.ibb.co/RpLgrvq/lupa.png' alt='lupa'/>
+        <img className="header-icon" src='https://i.ibb.co/Nnc7rS7/bag2.png' alt='bag'/>
       </div>
       <div className={`overlay ${drawerOpen ? 'visible' : ''}`} onClick={closeDrawer}></div>
       <div className={`drawer ${drawerOpen ? 'open' : ''}`}>

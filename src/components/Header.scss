@@ -160,16 +160,11 @@
   align-items: center;
 
   .header-icon {
-    margin-left: 35px;
-    font-size: 20px;
-    color: #333;
+    width: 21px;
+    height: 24px;
 
     &:first-child {
-      margin-left: 0;
-    }
-
-    &:hover {
-      color: #007bff;
+      margin-right: 30px;
     }
   }
 }
@@ -284,6 +279,7 @@
     .header-icons {
       display: flex;
       order: 1;
+      padding-right: 10px;
     }
 
     .logo {
