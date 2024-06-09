@@ -3,7 +3,7 @@
 .menu-container {
     background-color: #fff;
     padding: 5px 0;
-    height: 41px;
+    height: 50px;
     width: 100%;
     position: fixed;
     z-index: 2;
@@ -20,12 +20,14 @@
             line-height: 21px;
             color: #353535;
             font-family: 'Titillium Web', Arial, monospace;
+            cursor: pointer;
         }
     }
 
     .novidades {
         display: flex;
         align-items: center;
+        cursor: pointer;
 
         img {
             margin-bottom: 9px;
