@@ -23,6 +23,14 @@ const Header = () => {
       <div className="logo">
         <img src="https://i.ibb.co/StZVfCx/logo-maeztra-novo.png" alt="Logo" />
       </div>
+      <div className="search-bar">
+      <input 
+        type="text" 
+        placeholder="O que Você Busca?" 
+        className="search-input"
+      />
+      <button className="search-button">Buscar</button>
+    </div>
       <div className="header-icons">
         <FontAwesomeIcon icon={faSearch} className="header-icon" />
         <FontAwesomeIcon icon={faShoppingBag} className="header-icon" />
