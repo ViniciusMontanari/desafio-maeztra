@@ -36,7 +36,9 @@ const Popup = () => {
       {isOpen && (
         <div className="popup-overlay">
           <div className="popup">
-            <span className="popup-close" onClick={closePopup}>FECHAR</span>
+            <div className="popup-close-container">
+              <span className="popup-close" onClick={closePopup}>FECHAR</span>
+            </div>
             <div className="popup-content">
               <img className='carta' src='https://i.ibb.co/m5jFXjh/newsletter-mail-icon.png' alt='envelope' />
               <h2>Bem Vindo à MAEZTRA</h2>

@@ -43,3 +43,12 @@
         }
     }
 }
+
+/* Ajustes específicos para o layout mobile */
+@media (max-width: 768px) {
+
+    .menu-container {
+        display: none;
+    }
+
+}

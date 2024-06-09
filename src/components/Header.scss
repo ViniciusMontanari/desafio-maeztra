@@ -226,7 +226,7 @@
 
 .drawer {
   position: fixed;
-  top: 30px;
+  top: 20px;
   left: -250px;
   width: 250px;
   height: 100%;
@@ -295,6 +295,18 @@
       }
     }
     .search-bar {
+      display: none;
+    }
+    
+    .search-input {
+      display: none;
+    }
+    
+    .search-button {
+      display: none;
+    }
+    
+    .menu-itens {
       display: none;
     }
   }
