@@ -55,6 +55,7 @@
         font-weight: 400;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
         width: 254px;
 
         &:hover {
@@ -124,9 +125,9 @@
     }
 
     .product {
-        width: 308px; // Define a largura específica para cada item do slider
-        height: 601px; // Define a altura específica para cada item do slider
-        padding: 5px; // Ajuste o padding conforme necessário
+        width: 308px;
+        height: 601px;
+        padding: 5px;
     
         //Centraliza o conteúdo verticalmente e horizontalmente
         display: flex !important;
@@ -135,10 +136,10 @@
         align-items: center;
 
       .product-image {
-        width: 308px; // Mantém a proporção original da imagem
+        width: 308px;
         height: 381px;
-        max-width: 100%; // Limita a largura da imagem ao tamanho do contêiner
-        max-height: 100%; // Limita a altura da imagem ao tamanho do contêiner
+        max-width: 100%;
+        max-height: 100%;
       }
 
       .product-info {
@@ -152,7 +153,7 @@
       }
 
       .add-button {
-        padding: 8px 16px;
+        padding: 8px 90px;
     }
     }
 

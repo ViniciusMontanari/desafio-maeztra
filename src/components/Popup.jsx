@@ -5,18 +5,11 @@ const Popup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Exibir o pop-up ao carregar a página em dispositivos móveis
     const handleResize = () => {
       if (window.innerWidth <= 768) {
         setIsOpen(true);
       }
     };
-
-    if(isOpen) {
-      document.body.classList.add('active-popup')
-    } else {
-      document.body.classList.remove('active-popup')
-    }
 
     handleResize(); // Verifique o tamanho da janela ao carregar a página
     window.addEventListener('resize', handleResize);
@@ -25,6 +18,14 @@ const Popup = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('active-popup');
+    } else {
+      document.body.classList.remove('active-popup');
+    }
+  }, [isOpen]);
 
   const closePopup = () => {
     setIsOpen(false);

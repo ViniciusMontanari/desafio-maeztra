@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 body.active-popup {
   overflow-y: hidden;
@@ -12,7 +13,8 @@ body.active-popup {
     right: 0;
     bottom: 0;
     position: fixed;
-    background: rgba(49, 49, 49, 0.8);
+    background: linear-gradient(180deg, #000000B2 0%, transparent 100%);
+    z-index: 10;
   }
   
   .popup {
@@ -24,16 +26,17 @@ body.active-popup {
     left: 27px;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 2;
+    z-index: 20;
   }
   
   .popup-close {
     position: absolute;
-    top: 10px;
+    top: -23px;
     right: 10px;
+    font-size: 12;
     cursor: pointer;
-    color: #000;
-    font-weight: bold;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
   }
   
   .popup-content {
