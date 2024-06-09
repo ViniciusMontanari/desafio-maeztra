@@ -26,28 +26,57 @@ const Shelf = () => {
   return (
     <section className="product-slider">
         <h1 className='shelf-title'>As Mais Pedidas</h1>
-        <Slider {...settings}>
+
+        {/* Slider para dispositivos móveis */}
+        <div className="shelf-mobile-slider">
+          <Slider {...settings}>
+              {mockShelf.map((product, index) => (
+              <div className="product" key={index}>
+                  <img src={product.image} alt={product.title} className="product-image" />
+                  <div className="product-info">
+                      <div className="product-colors">
+                          {product.colors.map((color, index) => (
+                          <span
+                              key={index}
+                              className="color-square"
+                              style={{ backgroundColor: color }}
+                          ></span>
+                          ))}
+                      </div>
+                      <p className="product-price">{product.price}</p>
+                      <h2 className="product-title">{product.title}</h2>
+                      <p className="product-description">{product.description}</p>
+                  </div>
+                  <button className="add-button">Adicionar</button>
+              </div>
+              ))}
+          </Slider>
+        </div>
+
+
+        {/* Lista estática para desktop */}
+        <div className="static-shelf">
             {mockShelf.map((product, index) => (
-            <div className="product" key={index}>
-                <img src={product.image} alt={product.title} className="product-image" />
-                <div className="product-info">
-                    <div className="product-colors">
-                        {product.colors.map((color, index) => (
-                        <span
-                            key={index}
-                            className="color-square"
-                            style={{ backgroundColor: color }}
-                        ></span>
-                        ))}
-                    </div>
-                    <p className="product-price">{product.price}</p>
-                    <h2 className="product-title">{product.title}</h2>
-                    <p className="product-description">{product.description}</p>
-                </div>
-                <button className="add-button">Adicionar</button>
-            </div>
+              <div className="product" key={index}>
+                  <img src={product.image} alt={product.title} className="product-image" />
+                  <div className="product-info">
+                      <div className="product-colors">
+                          {product.colors.map((color, index) => (
+                          <span
+                              key={index}
+                              className="color-square"
+                              style={{ backgroundColor: color }}
+                          ></span>
+                          ))}
+                      </div>
+                      <p className="product-price">{product.price}</p>
+                      <h2 className="product-title">{product.title}</h2>
+                      <p className="product-description">{product.description}</p>
+                  </div>
+                  <button className="add-button">Adicionar</button>
+              </div>
             ))}
-        </Slider>
+        </div>
     </section>
   );
 };

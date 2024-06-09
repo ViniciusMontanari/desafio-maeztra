@@ -27,13 +27,26 @@ const Partnership = () => {
   return (
     <section className="partner-list">
       <h1 className='partner-list-title'>Marcas Parceiras</h1>
-      <Slider {...settings}>
+
+      {/* Slider para dispositivos móveis */}
+      <div className="partner-mobile-slider">
+        <Slider {...settings}>
+          {mockPartnership.map((partner, index) => (
+            <div className="partner" key={index}>
+              <img src={partner.image} alt={partner.name} />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* Lista estática para desktop */}
+      <div className="static-partner-list">
         {mockPartnership.map((partner, index) => (
           <div className="partner" key={index}>
             <img src={partner.image} alt={partner.name} />
           </div>
         ))}
-      </Slider>
+      </div>
     </section>
   );
 };

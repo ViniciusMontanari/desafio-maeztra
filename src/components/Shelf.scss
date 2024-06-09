@@ -1,176 +1,243 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
-.product-slider {
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+  .product-slider {
     display: flex;
     flex-direction: column;
     padding: 20px;
     overflow: hidden;
 
-  .slick-slide {
-    padding: 0 5px; // Espaçamento interno dos slides
-    box-sizing: border-box; // Inclui padding no tamanho do box
-
-    // Evita que os slides ultrapassem a largura disponível
-    min-width: 0;
-  }
-
-  .shelf-title {
-    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36.5px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .product {
-    width: 308px; // Define a largura específica para cada item do slider
-    height: 601px; // Define a altura específica para cada item do slider
-    padding: 5px; // Ajuste o padding conforme necessário
-
-    //Centraliza o conteúdo verticalmente e horizontalmente
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-      transform: translateY(-5px);
+    .static-shelf {
+      display: none;
     }
 
-    .product-image {
-        width: 308px; // Mantém a proporção original da imagem
-        height: 381px;
-        max-width: 100%; // Limita a largura da imagem ao tamanho do contêiner
-        max-height: 100%; // Limita a altura da imagem ao tamanho do contêiner
-    }
-
-    .add-button {
-        background-color: #FAA500; // Cor do botão
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        font-weight: 400;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
-        width: 254px;
-
-        &:hover {
-          background-color: #ff8800; // Cor ao passar o mouse
-        }
-    }
-
-    .product-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      .product-title {
-        font-size: 16px;
-        font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
-        font-weight: 400;
-        margin: 10px 0;
-        color: #353535;
-      }
-
-      .product-description {
-        font-size: 12px;
-        font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
-        font-weight: 400;
-        color: #353535;
-        margin: 0px 0 10px;
-        text-align: left;
-        word-break: break-all;
-        width: 256px;
-        height: 54px;
-      }
-
-      .product-colors {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-        margin: 10px 0;
-
-        .color-square {
-          width: 20px;
-          height: 20px;
-          border-radius: 4px;
-          border: 1px;
-        }
-      }
-
-      .product-price {
-        font-size: 20px;
-        font-weight: 700;
-        color: #353535;
-        font-weight: 700;
-        margin: 0;
-      }
-    }
-  }
-}
-
-/* Ajustes para dispositivos móveis */
-@media (max-width: 768px) {
-  .product-slider {
-
-    .partner-list-title {
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 36.5px;
-        text-align: center;
-        margin-bottom: 20px;
+    .shelf-title {
+      font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36.5px;
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     .product {
         width: 308px;
         height: 601px;
         padding: 5px;
-    
-        //Centraliza o conteúdo verticalmente e horizontalmente
         display: flex !important;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-      .product-image {
-        width: 308px;
-        height: 381px;
-        max-width: 100%;
-        max-height: 100%;
-      }
-
-      .product-info {
-
-        .product-colors { 
-            .color-square {
-                width: 27px;
-                height: 27px;
-            }
+        .product-image {
+          width: 308px;
+          height: 381px;
+          max-width: 100%;
+          max-height: 100%;
         }
-      }
 
-      .add-button {
-        padding: 8px 90px;
-    }
+        .product-info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .product-title {
+          font-size: 16px;
+          font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+          font-weight: 400;
+          margin: 10px 0;
+          color: #353535;
+        }
+
+        .product-description {
+          font-size: 12px;
+          font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+          font-weight: 400;
+          color: #353535;
+          margin: 0px 0 10px;
+          text-align: left;
+          word-break: break-all;
+          width: 256px;
+          height: 54px;
+        }
+
+        .product-colors {
+          display: flex;
+          justify-content: center;
+          gap: 5px;
+          margin: 10px 0;
+
+          .color-square {
+            width: 27px;
+            height: 27px;
+            border-radius: 4px;
+            border: 1px;
+          }
+        }
+
+        .add-button {
+          background-color: #FAA500;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          padding: 8px 90px;
+          font-size: 16px;
+          font-weight: 400;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+          width: 254px;
+
+          &:hover {
+            background-color: #ff8800;
+          }
+        }
+
+        .product-price {
+          font-size: 20px;
+          font-weight: 700;
+          color: #353535;
+          font-weight: 700;
+          margin: 0;
+        }
+      
     }
 
-    // Ajustes no slider para garantir que os itens respeitem a largura e altura definidas
     .slick-slide {
       display: flex;
-      justify-content: center; // Centraliza os itens dentro do slide
+      justify-content: center;
+      padding: 0 5px;
+      box-sizing: border-box;
+      min-width: 0;
     }
 
     .slick-track {
       display: flex;
-      align-items: center; // Centraliza verticalmente os itens na track
+      align-items: center;
     }
 
     .slick-list {
       display: flex;
-      justify-content: center; // Centraliza os itens dentro da lista do slider
+      justify-content: center;
+    }
+  }
+}
+
+// Ajustes específicos para o layout desktop
+@media (min-width: 769px) {
+  .product-slider {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 80px;
+
+    .shelf-mobile-slider {
+      display: none;
+    }
+
+    .static-shelf {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .shelf-title {
+      font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      color: #353535;
+      line-height: 48.67px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .product {
+      width: 308px; 
+      height: 601px; 
+      padding: 5px;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      .product-image {
+          width: 308px;
+          height: 381px;
+          max-width: 100%;
+          max-height: 100%;
+      }
+  
+      .add-button {
+          background-color: #FAA500;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          font-size: 16px;
+          font-weight: 400;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+          width: 254px;
+  
+          &:hover {
+            background-color: #ff8800;
+          }
+      }
+  
+      .product-info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        .product-title {
+          font-size: 16px;
+          font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+          font-weight: 400;
+          margin: 10px 0;
+          color: #353535;
+        }
+  
+        .product-description {
+          font-size: 12px;
+          font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+          font-weight: 400;
+          color: #353535;
+          margin: 0px 0 10px;
+          text-align: left;
+          word-break: break-all;
+          width: 256px;
+          height: 54px;
+        }
+  
+        .product-colors {
+          display: flex;
+          justify-content: center;
+          gap: 5px;
+          margin: 10px 0;
+  
+          .color-square {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 1px;
+          }
+        }
+  
+        .product-price {
+          font-size: 20px;
+          font-weight: 700;
+          color: #353535;
+          font-weight: 700;
+          margin: 0;
+        }
+      }
     }
   }
 }
