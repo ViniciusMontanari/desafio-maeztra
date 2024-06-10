@@ -1,36 +1,217 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
-.menu-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 37px;
-    margin-bottom: 56px;
+// Estilo para dispositivos móveis
+@media (max-width: 768px) {
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        .bottom-menu-desktop {
+            display: none;
+        }
+    }
+
+    .menu-item {
+        margin-bottom: 10px;
+        /* Espaçamento entre os menus */
+    }
+
+    .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        font-size: 20px;
+        /* Tamanho da fonte para o ícone */
+    }
+
+    .menu-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        padding: 0 10px;
+        background-color: #f1f1f1;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        border-radius: 0 0 5px 5px;
+        opacity: 0; // Definir opacidade para zero por padrão
+    }
+
+    .menu-subitem {
+        padding: 5px 0;
+        font-size: 14px;
+        /* Tamanho da fonte para os itens */
+        color: #555;
+        /* Cor do texto */
+    }
+
+    .menu-content.open {
+        max-height: 300px;
+        /* Ajuste o valor conforme necessário */
+        opacity: 1; // Tornar visível quando aberto
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; // Transições suaves para ambos
+    }
+
 }
 
-.menu-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 1rem;
-    margin-left: 43px;
-}
+// Ajustes específicos para o layout desktop
+@media (min-width: 769px) {
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 37px;
+        margin-bottom: 56px;
 
-.menu-text {
-    font-size: 16px;
-    font-weight: 700;
-    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
-    text-align: left;
-    flex: 1;
-}
+        .bottom-menu-mobile {
+            display: none;
+        }
 
-.menu-icon {
-    font-size: 16px;
-    font-weight: 700;
-    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    margin-left: 1rem;
+        .bottom-menu-desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 49.6%;
+            left: 25.2%;
+            position: relative;
+
+            .menu-item-1 {
+
+                .menu-header {
+                    .menu-text {
+                        text-decoration: none;
+                        color: black;
+                        font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 18px;
+                    }
+                }
+
+                .menu-content-1 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 187px;
+                    align-items: flex-start;
+                    margin-top: 35px;
+    
+                    .menu-subitem-1 {
+                        margin-bottom: 20px;
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+                            font-size: 12px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+
+            .menu-item-2 {
+
+                .menu-header {
+                    .menu-text {
+                        text-decoration: none;
+                        color: black;
+                        font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 18px;
+                    }
+                }
+
+                .menu-content-2 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 127px;
+                    align-items: flex-start;
+                    margin-top: 35px;
+    
+                    .menu-subitem-2 {
+                        margin-bottom: 20px;
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+                            font-size: 12px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+
+            .menu-item-3 {
+
+                .menu-header {
+                    .menu-text {
+                        text-decoration: none;
+                        color: black;
+                        font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 18px;
+                    }
+                }
+
+                .menu-content-3 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 90px;
+                    align-items: flex-start;
+                    margin-top: 35px;
+    
+                    .menu-subitem-3 {
+                        margin-bottom: 20px;
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+                            font-size: 12px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+    
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 1rem;
+        margin-left: 43px;
+    }
+    
+    .menu-text {
+        font-size: 16px;
+        font-weight: 700;
+        font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+        text-align: left;
+        flex: 1;
+    }
+    
+    .menu-icon {
+        font-size: 16px;
+        font-weight: 700;
+        font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        margin-left: 1rem;
+    }
 }
