@@ -15,33 +15,33 @@ body.active-popup {
   position: fixed;
   background: linear-gradient(180deg, #000000B2 0%, transparent 100%);
   z-index: 10;
-  display: flex;  // Flexbox para centralizar o popup
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .popup {
   background: #fff;
-  width: 90vw;  // Usar largura responsiva
-  max-width: 314px;  // Largura máxima
-  height: auto;  // Altura automática para se ajustar ao conteúdo
-  max-height: 90vh;  // Altura máxima para evitar overflow
+  width: 90vw;
+  max-width: 314px;
+  height: auto;
+  max-height: 90vh;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 20;
-  padding: 20px;  // Adicionar padding para espaçamento interno
-  overflow: visible;  // Certificar-se de que o overflow permite a visualização do botão
-  transform: translateY(-43%);  // Mover o popup 10% para cima do centro
+  padding: 20px; 
+  overflow: visible;
+  transform: translateY(-43%);
 }
 
 .popup-close-container {
   position: absolute;
-  top: -23px;  // Posiciona a borda superior do contêiner um pouco acima do popup
-  right: 10px;  // Posiciona a borda direita do contêiner um pouco à direita do popup
+  top: -23px;
+  right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 30;  // Garantir que o contêiner do botão esteja acima do popup
+  z-index: 30;
 }
 
 .popup-close {
@@ -55,7 +55,7 @@ body.active-popup {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 40;  // Garantir que o botão esteja acima de outros elementos
+  z-index: 40;
 }
 
 .popup-content {
@@ -141,6 +141,6 @@ input[type="email"] {
 
 @media (min-width: 769px) {
   .popup-overlay {
-    display: none; /* Ocultar o pop-up em dispositivos maiores */
+    display: none;
   }
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./BottomInfoMenu.scss";
 
 const BottomInfoMenu = () => {
-  const [openMenu, setOpenMenu] = useState(null); // Estado para controlar qual menu está aberto
+  const [openMenu, setOpenMenu] = useState(null);
 
   // Itens dos menus
   const menuItems = {
@@ -23,7 +23,6 @@ const BottomInfoMenu = () => {
     ],
   };
 
-  // Alterna a visibilidade do menu
   const toggleMenu = (menu) => {
     setOpenMenu((prevMenu) => (prevMenu === menu ? null : menu));
   };

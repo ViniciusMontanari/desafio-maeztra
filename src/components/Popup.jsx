@@ -5,33 +5,33 @@ const Popup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Verificar se o popup foi fechado nesta sessão
+    // Verifica se o popup foi fechado nesta sessão
     const popupClosed = sessionStorage.getItem("popupClosed");
-    if (!popupClosed) {
-      // Verificar o tamanho da janela ao carregar a página
-      if (window.innerWidth <= 768) {
-        setIsOpen(true);
-      }
+
+    if (!popupClosed && window.innerWidth <= 768) {
+      setIsOpen(true); // Abre o popup apenas se não foi fechado e a tela está em modo mobile
     }
 
-    // Listener para redimensionamento da janela
+    // Função para controlar a visibilidade do popup com base no tamanho da janela
     const handleResize = () => {
-      if (window.innerWidth <= 768 && !popupClosed) {
-        setIsOpen(true);
-      } else {
-        setIsOpen(false);
+      if (window.innerWidth > 768) {
+        setIsOpen(false); // Não exibe o popup em tamanhos de tela maiores que 768px
+      } else if (!sessionStorage.getItem("popupClosed")) {
+        setIsOpen(true); // Exibe o popup apenas se não foi fechado anteriormente na sessão
       }
     };
 
+    // Adiciona listeners para redimensionamento
     window.addEventListener("resize", handleResize);
 
-    // Remover o listener no cleanup do useEffect
+    // Limpa o listener quando o componente é desmontado
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   useEffect(() => {
+    // Adiciona ou remove a classe 'active-popup' do body com base no estado do popup
     if (isOpen) {
       document.body.classList.add("active-popup");
     } else {
@@ -40,9 +40,8 @@ const Popup = () => {
   }, [isOpen]);
 
   const closePopup = () => {
-    setIsOpen(false);
-    // Marcar no sessionStorage que o popup foi fechado
-    sessionStorage.setItem("popupClosed", "true");
+    setIsOpen(false); // Fecha o popup
+    sessionStorage.setItem("popupClosed", "true"); // Marca o popup como fechado na sessão atual
   };
 
   return (
