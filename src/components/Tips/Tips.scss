@@ -90,8 +90,8 @@
   }
 }
 
-// Ajustes específicos para o layout desktop
-@media (min-width: 769px) {
+@media (min-width: 1199px) and (max-width: 1519px) {
+
   .tips-list {
     display: flex;
     flex-direction: column;
@@ -105,6 +105,78 @@
     .static-tips-list {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .tips-list-title {
+      font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24.34px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tips {
+      width: 298px;
+      height: 64px;
+      background: #fff;
+      padding: 5px;
+      box-sizing: border-box;
+      background-color: #EFEFEF;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+
+      h2 {
+        font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #353535;
+        font-weight: 700;
+        margin: 0;
+        text-align: left;
+        width: 100%;
+      }
+
+      p {
+        font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: black;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+        max-width: 100%;
+        max-height: 100%;
+        margin-left: 20px;
+        margin-right: 15px;
+      }
+    }
+  }
+
+}
+
+// Ajustes específicos para o layout desktop
+@media (min-width: 1520px) {
+  .tips-list {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+    
+    .mobile-slider {
+      display: none;
+    }
+
+    .static-tips-list {
+      display: flex;
       justify-content: center;
       gap: 20px;
     }

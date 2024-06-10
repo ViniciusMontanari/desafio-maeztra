@@ -43,8 +43,53 @@
     }
 }
 
+
+@media (min-width: 1199px) and (max-width: 1543px) {
+
+    .lorem {
+        width: 100%;
+        overflow: hidden;
+        text-align: -webkit-center;
+    
+        .lorem-infos {
+            width: auto;
+            margin-top: 23px;
+
+            .lorem-text-desktop {
+                display: none;
+            }
+
+            .lorem-text-mobile {
+                width: 1114px;
+
+                h1 {
+                    text-align: left;
+                    font-size: 24px;
+                    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+                    font-weight: 700;
+                }
+        
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+                    text-align: left;
+                }
+            }
+    
+    
+            img {
+                width: 1114px;
+                height: 684px;
+                border-radius: 4px;
+                margin-top: 24px;
+            }
+        }
+    }
+}
+
 // Ajustes específicos para o layout desktop
-@media (min-width: 769px) {
+@media (min-width: 1544px) {
     .lorem {
         max-width: 100%;
         overflow: hidden;

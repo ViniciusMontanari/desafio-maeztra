@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 /* Ajustes para dispositivos móveis */
-@media (max-width: 768px) {
+@media (min-width: 1199px) and (max-width: 1430px) {
   .product-slider {
     display: flex;
     flex-direction: column;
@@ -126,7 +126,7 @@
 }
 
 // Ajustes específicos para o layout desktop
-@media (min-width: 769px) {
+@media (min-width: 1431px) {
   .product-slider {
     display: flex;
     flex-direction: column;

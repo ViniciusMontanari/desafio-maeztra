@@ -9,7 +9,9 @@ const Footer = () => (
       <a href="#linkedin"><img src='https://i.ibb.co/9h55rPC/www-linkedin-com.png' alt='In'/></a>
       <a href="#instagram"><img src='https://i.ibb.co/BTXb7gp/www-instagram-com.png' alt='insta'/></a>
       <a href="#youtube"><img src='https://i.ibb.co/3sbjDfD/www-youtube-com.png' alt='youtube'/></a>
-      <img className='pagamentos' src='https://i.ibb.co/KrTY9py/accepted-payment-methods-meio-de-pagamentos.png' alt='pgtos'/>
+    </div>
+    <div className="footer-pagamentos">
+        <img className='pagamentos' src='https://i.ibb.co/KrTY9py/accepted-payment-methods-meio-de-pagamentos.png' alt='pgtos'/>
     </div>
     <div className='powered'>
         <div className='vtex'>
