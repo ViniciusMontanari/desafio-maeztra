@@ -42,19 +42,19 @@ const PopupDesktop = () => {
   return (
     <>
       {isOpen && (
-        <div className="popup-overlay">
-          <div className="popup-container">
-            <img className='popup-img' src='https://i.ibb.co/M140hgM/image-4.png' alt='popup img' />
-            <div className="popup">
-              <div className="popup-close-container">
-                <span className="popup-close" onClick={closePopup}>FECHAR</span>
+        <div className="popup-desktop-overlay">
+          <div className="popup-desktop-container">
+            <img className='popup-desktop-img' src='https://i.ibb.co/M140hgM/image-4.png' alt='popup img' />
+            <div className="popup-desktop">
+              <div className="popup-desktop-close-container">
+                <span className="popup-desktop-close" onClick={closePopup}>FECHAR</span>
               </div>
-              <div className="popup-content">
+              <div className="popup-desktop-content">
                 <img className='carta' src='https://i.ibb.co/m5jFXjh/newsletter-mail-icon.png' alt='envelope' />
                 <h2>Bem Vindo à MAEZTRA</h2>
                 <p>Receba em Primeira mão<br/>desconto e ofertas exclusivas</p>
                 <input type="email" placeholder="Digite seu e-mail" />
-                <button className='popup-btn' type="button">
+                <button className='popup-desktop-btn' type="button">
                   ENVIAR <img src='https://i.ibb.co/tJq8zVZ/image.png' alt='aviao' />
                 </button>
               </div>

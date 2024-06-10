@@ -5,33 +5,28 @@ const Popup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Verifica se o popup foi fechado nesta sessão
     const popupClosed = sessionStorage.getItem("popupClosed");
 
     if (!popupClosed && window.innerWidth <= 768) {
-      setIsOpen(true); // Abre o popup apenas se não foi fechado e a tela está em modo mobile
+      setIsOpen(true);
     }
 
-    // Função para controlar a visibilidade do popup com base no tamanho da janela
     const handleResize = () => {
       if (window.innerWidth > 768) {
-        setIsOpen(false); // Não exibe o popup em tamanhos de tela maiores que 768px
+        setIsOpen(false);
       } else if (!sessionStorage.getItem("popupClosed")) {
-        setIsOpen(true); // Exibe o popup apenas se não foi fechado anteriormente na sessão
+        setIsOpen(true); 
       }
     };
 
-    // Adiciona listeners para redimensionamento
     window.addEventListener("resize", handleResize);
 
-    // Limpa o listener quando o componente é desmontado
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   useEffect(() => {
-    // Adiciona ou remove a classe 'active-popup' do body com base no estado do popup
     if (isOpen) {
       document.body.classList.add("active-popup");
     } else {
@@ -40,8 +35,8 @@ const Popup = () => {
   }, [isOpen]);
 
   const closePopup = () => {
-    setIsOpen(false); // Fecha o popup
-    sessionStorage.setItem("popupClosed", "true"); // Marca o popup como fechado na sessão atual
+    setIsOpen(false);
+    sessionStorage.setItem("popupClosed", "true");
   };
 
   return (
