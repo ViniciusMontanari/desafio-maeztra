@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-.footer {
+// Estilo para dispositivos móveis
+@media (max-width: 768px) {
+  .footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     height: 233px;
-  
+
     .links {
-    
+
       a {
         color: #fff;
         margin: 0 12px;
@@ -43,6 +45,7 @@
           margin-bottom: 5px;
         }
       }
+
       .maeztra {
         display: flex;
         flex-direction: column;
@@ -58,4 +61,91 @@
         }
       }
     }
-}  
+  }
+}
+
+// Ajustes específicos para o layout desktop
+@media (min-width: 769px) {
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      position: relative;
+      left: 6.7%;
+
+      a {
+        color: #fff;
+        margin: 0 12px;
+        text-decoration: none;
+
+        img {
+          margin-top: 2%;
+        }
+      }
+
+      .pagamentos {
+        margin-top: 2%;
+        left: 88%;
+        position: relative;
+      }
+    }
+
+    .powered {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      position: relative;
+      right: 7%;
+
+      .vtex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        right: 10%;
+
+        p {
+          font-size: 10px;
+          color: #FFFFFF;
+          line-height: 13.62px;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          margin-bottom: 5px;
+        }
+
+        img {
+          content: url('https://i.ibb.co/pK8Xv6j/vtex2.png');
+        }
+      }
+
+      .maeztra {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        p {
+          font-size: 10px;
+          color: #FFFFFF;
+          line-height: 13.62px;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          margin-bottom: 1px;
+        }
+
+        img {
+          content: url('https://i.ibb.co/Ms9gSTP/maeztra2.png');
+        }
+      }
+    }
+  }
+}
