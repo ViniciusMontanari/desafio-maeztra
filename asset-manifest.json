@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/desafio-maeztra/static/css/main.cdb73c82.css",
-    "main.js": "/desafio-maeztra/static/js/main.92f97818.js",
+    "main.css": "/desafio-maeztra/static/css/main.deae3947.css",
+    "main.js": "/desafio-maeztra/static/js/main.97a060ce.js",
     "static/js/453.41268518.chunk.js": "/desafio-maeztra/static/js/453.41268518.chunk.js",
     "index.html": "/desafio-maeztra/index.html",
-    "main.cdb73c82.css.map": "/desafio-maeztra/static/css/main.cdb73c82.css.map",
-    "main.92f97818.js.map": "/desafio-maeztra/static/js/main.92f97818.js.map",
+    "main.deae3947.css.map": "/desafio-maeztra/static/css/main.deae3947.css.map",
+    "main.97a060ce.js.map": "/desafio-maeztra/static/js/main.97a060ce.js.map",
     "453.41268518.chunk.js.map": "/desafio-maeztra/static/js/453.41268518.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdb73c82.css",
-    "static/js/main.92f97818.js"
+    "static/css/main.deae3947.css",
+    "static/js/main.97a060ce.js"
   ]
 }
