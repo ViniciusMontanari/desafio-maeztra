@@ -9,6 +9,7 @@ import Newsletter from './components/Newsletter';
 import BottomInfoMenu from './components/BottomInfoMenu';
 import Footer from './components/Footer';
 import Popup from './components/Popup';
+import PopupDesktop from './components/PopupDesktop';
 import DesktopMenu from './components/DesktopMenu';
 import NotificationBar from './components/NotificationBar';
 
@@ -29,6 +30,7 @@ function App() {
       <BottomInfoMenu />
       <Footer />
       <Popup />
+      <PopupDesktop />
     </div>
   );
 }
