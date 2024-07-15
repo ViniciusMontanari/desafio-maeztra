@@ -3,6 +3,22 @@
 @media (min-width: 1199px) and (max-width: 1476px) {
   .banner {
       position: relative;
+      overflow: hidden;
+
+      .banner-img-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s ease-in-out;
+    
+        &.slide-left {
+          transform: translateX(-100%);
+        }
+    
+        &.slide-right {
+          transform: translateX(100%);
+        }
+      }
   
       .banner-img {
         width: 100%;
